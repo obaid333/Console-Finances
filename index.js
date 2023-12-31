@@ -109,10 +109,16 @@ let avgFinances = [];
 
 for (var i = 1; i < totalMonths; i++) {
   var change = finances[i][1] - finances[i - 1][1];
-  avgFinances.push(change);
+  avgFinances.push(change);  
 };
 
-console.log(avgFinances);
+let sumDiff = 0;
+
+for (let i = 0; i < avgFinances.length; i++) {
+  sumDiff += avgFinances[i];
+  var avgChange = sumDiff/(avgFinances.length)
+};
+console.log('Average Change:', avgChange);
 
 
 //greatest increase of entire array and what month it occurs in
