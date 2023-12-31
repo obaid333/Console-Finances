@@ -86,3 +86,49 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+
+//total number of months in dataset ... array length? but there is arrays inside of arrays 
+
+let totalMonths = finances.length;
+console.log("Total Months:", totalMonths);
+
+//net total profit/loss over the entire period ... add all values up .. while loop to get all the array items and then the second value of each array
+
+let sum = 0;
+
+
+for (let i = 0; i < totalMonths; i++) {
+  sum += finances[i][1]  
+};
+console.log('Total:', sum);
+
+//average of changes over entire period, will need to make a new array of changes and then find average of that
+
+let avgFinances = [];
+
+for (var i = 1; i < totalMonths; i++) {
+  var change = finances[i][1] - finances[i - 1][1];
+  avgFinances.push(change);
+};
+
+console.log(avgFinances);
+
+
+//greatest increase of entire array and what month it occurs in
+
+//greatest decrease of entire array and what month it occurs in
+
+
+// end goal:
+//.........
+// Financial Analysis 
+// ----------------
+// Total Months: 86
+// Total: $38382578
+// Average Change: -2315.12
+// Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
+// Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
+
+//concatenation function in javascript?
+//print to the nearest 100th in js
