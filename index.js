@@ -123,12 +123,19 @@ console.log('Average Change:', avgChange);
 
 //greatest increase of entire array and what month it occurs in, math.max
 
-let maxValue = Math.max(...numArray);
+let maxValue = Math.max(...numArray); // '...' solved the problem, Math.max works on individual arguments and not arrays, the '...' unpacks the array   
+
+
 
 console.log('Greatest Increase in Profits/Losses:', maxValue);
 
+
+
 //greatest decrease of entire array and what month it occurs in, math.min
 
+let minValue = Math.min(...numArray);
+
+console.log('Greatest Decrease in Profits/Losses:', minValue);
 
 // end goal:
 //.........
