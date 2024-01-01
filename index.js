@@ -118,7 +118,7 @@ for (let i = 0; i < numArray.length; i++) {
   sumDiff += numArray[i];
   var avgChange = sumDiff/(numArray.length)
 };
-console.log('Average Change: $'+avgChange);
+console.log('Average Change: $'+avgChange.toFixed(2));
 
 
 //greatest increase of entire array and what month it occurs in, math.max
