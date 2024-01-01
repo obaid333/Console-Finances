@@ -105,25 +105,29 @@ console.log('Total:', sum);
 
 //average of changes over entire period, will need to make a new array of changes and then find average of that
 
-let avgFinances = [];
+let numArray = [];
 
 for (var i = 1; i < totalMonths; i++) {
   var change = finances[i][1] - finances[i - 1][1];
-  avgFinances.push(change);  
+  numArray.push(change);  
 };
 
 let sumDiff = 0;
 
-for (let i = 0; i < avgFinances.length; i++) {
-  sumDiff += avgFinances[i];
-  var avgChange = sumDiff/(avgFinances.length)
+for (let i = 0; i < numArray.length; i++) {
+  sumDiff += numArray[i];
+  var avgChange = sumDiff/(numArray.length)
 };
 console.log('Average Change:', avgChange);
 
 
-//greatest increase of entire array and what month it occurs in
+//greatest increase of entire array and what month it occurs in, math.max
 
-//greatest decrease of entire array and what month it occurs in
+let maxValue = Math.max(numArray);
+
+console.log('Greatest Increase in Profits/Losses:', maxValue);
+
+//greatest decrease of entire array and what month it occurs in, math.min
 
 
 // end goal:
