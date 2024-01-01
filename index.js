@@ -101,7 +101,7 @@ let sum = 0;
 for (let i = 0; i < totalMonths; i++) {
   sum += finances[i][1]  
 };
-console.log('Total:', sum);
+console.log('Total: $'+sum);
 
 //average of changes over entire period, will need to make a new array of changes and then find average of that
 
@@ -118,16 +118,16 @@ for (let i = 0; i < numArray.length; i++) {
   sumDiff += numArray[i];
   var avgChange = sumDiff/(numArray.length)
 };
-console.log('Average Change:', avgChange);
+console.log('Average Change: $'+avgChange);
 
 
 //greatest increase of entire array and what month it occurs in, math.max
 
 let maxValue = Math.max(...numArray); // '...' solved the problem, Math.max works on individual arguments and not arrays, the '...' unpacks the array   
 
+var maxIndex = numArray.indexOf(maxValue);
 
-
-console.log('Greatest Increase in Profits/Losses:', maxValue);
+console.log('Greatest Increase in Profits/Losses:', finances[(maxIndex+1)][0], '($'+maxValue+')');
 
 
 
@@ -135,7 +135,9 @@ console.log('Greatest Increase in Profits/Losses:', maxValue);
 
 let minValue = Math.min(...numArray);
 
-console.log('Greatest Decrease in Profits/Losses:', minValue);
+var minIndex = numArray.indexOf(minValue);
+
+console.log('Greatest Decrease in Profits/Losses:', finances[(minIndex+1)][0], '($'+minValue+')');
 
 // end goal:
 //.........
