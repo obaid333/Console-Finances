@@ -123,7 +123,7 @@ console.log('Average Change:', avgChange);
 
 //greatest increase of entire array and what month it occurs in, math.max
 
-let maxValue = Math.max(numArray);
+let maxValue = Math.max(...numArray);
 
 console.log('Greatest Increase in Profits/Losses:', maxValue);
 
