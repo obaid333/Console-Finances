@@ -87,7 +87,7 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-
+console.log("Financial Analysis \n----------------------------- \n ");
 //total number of months in dataset ... array length? but there is arrays inside of arrays 
 
 let totalMonths = finances.length;
