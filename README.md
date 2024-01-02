@@ -6,8 +6,11 @@ Javascript coded as per instructions by TA's from EDx.
 
 
 Screenshots provided in the images folder.
-image of the final results
-![My Image](images/results in consol log.png)
 
+Image of final results
+
+Image of the code
+
+image of the financial array
 
 Copyright and designed by Obaid.
